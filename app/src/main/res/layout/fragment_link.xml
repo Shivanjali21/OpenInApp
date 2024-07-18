@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/curve_bg"
+    tools:context=".presentation.ui.fragments.linkfragment.LinkFragment">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivNoInternet"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/ic_nointernet"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/mtvNoInternet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="8dp"
+        android:layout_marginHorizontal="6dp"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:text="@string/no_internet"
+        android:textColor="@color/colorRed"
+        android:textSize="16sp"
+        app:fontFamily="@font/figtree_semibold"
+        android:visibility="gone"
+        tools:visibility="visible"
+        app:layout_constraintTop_toBottomOf="@id/ivNoInternet"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/contentView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        tools:visibility="gone">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/mtvGM"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:fontFamily="@font/figtree_medium"
+                android:includeFontPadding="false"
+                android:padding="4dp"
+                android:text="@string/gm_tag"
+                android:textColor="@color/colorBtmInActive"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/mtvUserName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:fontFamily="@font/figtree_semibold"
+                android:includeFontPadding="false"
+                android:padding="6dp"
+                android:text="@string/username_tag"
+                android:textColor="@color/colorBlack"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/mtvGM" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivWave"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginHorizontal="6dp"
+                android:src="@drawable/ic_wave"
+                app:layout_constraintBottom_toBottomOf="@+id/mtvUserName"
+                app:layout_constraintStart_toEndOf="@id/mtvUserName"
+                app:layout_constraintTop_toTopOf="@+id/mtvUserName" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/mcvChart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                app:cardBackgroundColor="@color/colorWhite"
+                app:cardCornerRadius="10dp"
+                app:contentPadding="10dp"
+                app:strokeWidth="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/mtvUserName">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/mtvOverView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/figtree_medium"
+                        android:includeFontPadding="false"
+                        android:padding="4dp"
+                        android:text="@string/overview_tag"
+                        android:textColor="@color/colorBtmInActive"
+                        android:textSize="16sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/mtvDate"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/mtvDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/date_bg"
+                        android:drawableEnd="@drawable/ic_time"
+                        android:fontFamily="@font/figtree_regular"
+                        android:includeFontPadding="false"
+                        android:text="22 Aug - 23 Sept"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.github.mikephil.charting.charts.LineChart
+                        android:id="@+id/lineChart"
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/mtvOverView" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvTopSection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginVertical="10dp"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/mcvChart"
+                tools:listitem="@layout/layout_rv_topsection" />
+
+            <include
+                android:id="@+id/clVAnalytics"
+                layout="@layout/link_layout_viewanalytics_cv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="20dp"
+                app:layout_constraintTop_toBottomOf="@id/rvTopSection" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/mcvTopLink"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="20dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="4dp"
+                app:cardBackgroundColor="@color/colorNavbar"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="4dp"
+                app:strokeWidth="0dp"
+                app:contentPadding="12dp"
+                app:layout_constraintEnd_toStartOf="@id/mcvRecentLink"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/clVAnalytics">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/mtvTopTag"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/top_links_btn"
+                    android:fontFamily="@font/figtree_semibold"
+                    android:includeFontPadding="false"
+                    android:textSize="16sp"
+                    android:textAlignment="center"/>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/mcvRecentLink"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="20dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="4dp"
+                app:strokeWidth="0dp"
+                app:cardBackgroundColor="@null"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="4dp"
+                app:contentPadding="12dp"
+                app:layout_constraintStart_toEndOf="@id/mcvTopLink"
+                app:layout_constraintTop_toBottomOf="@id/clVAnalytics">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/mtvRecentTag"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/figtree_semibold"
+                    android:includeFontPadding="false"
+                    android:textSize="16sp"
+                    android:text="@string/recent_links_btn"
+                    android:textAlignment="center"/>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivSearch"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_marginHorizontal="10dp"
+                android:background="@drawable/search_bg"
+                android:src="@drawable/ic_search"
+                app:layout_constraintBottom_toBottomOf="@id/mcvRecentLink"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/mcvRecentLink" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvTopRecentLink"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/mcvTopLink"
+                tools:listitem="@layout/layout_rv_toplinks" />
+
+            <include
+                android:id="@+id/clAllLinks"
+                layout="@layout/link_layout_alllink_cv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginVertical="20dp"
+                android:visibility="visible"
+                app:layout_constraintBottom_toTopOf="@id/clWhatsApp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rvTopRecentLink" />
+
+            <include
+                android:id="@+id/clWhatsApp"
+                layout="@layout/link_layout_whatsapp_cv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:visibility="visible"
+                app:layout_constraintBottom_toTopOf="@id/clFAQ"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <include
+                android:id="@+id/clFAQ"
+                layout="@layout/link_layout_faq_cv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,69 @@
+[versions]
+
+agp = "8.1.2"
+kotlin = "1.9.24"
+coreKtx = "1.13.1"
+junit = "4.13.2"
+junitVersion = "1.2.1"
+espressoCore = "3.6.1"
+appcompat = "1.7.0"
+material = "1.12.0"
+activity = "1.9.0"
+constraintlayout = "2.1.4"
+
+coreSplashscreenVersion = "1.0.1"
+navFragmentKtx = "2.7.7"
+navUiKtx = "2.7.7"
+ktCoroutineAndroid = "1.7.3"
+glide = "4.16.0"
+lifeCycleVMKt = "2.8.3"
+lifeCycleRuntimekt = "2.8.3"
+lifeCycleLiveData = "2.8.3"
+squareRetrofit = "2.9.0"
+converterGson = "2.9.0"
+loggingInterceptor = "4.10.0"
+kotlinParcelize = "1.8.10"
+kotlinKapt = "1.8.0"
+devtoolKSP = "1.9.22-1.0.17"
+navSafeArgs = "2.7.7"
+hiltAndroid = "2.49"
+hiltCompiler = "1.2.0"
+mpandroidchart = "v3.1.0"
+dagger-hilt-android = "2.4.2"
+
+[libraries]
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
+androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+
+navFragmentKtx = { group = "androidx.navigation", name = "navigation-fragment-ktx", version.ref = "navFragmentKtx" }
+navUiKtx = { group = "androidx.navigation", name = "navigation-ui-ktx", version.ref = "navUiKtx" }
+ktCoroutineAndroid = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version.ref = "ktCoroutineAndroid"}
+glide = { group = "com.github.bumptech.glide" , name = "glide", version.ref = "glide"}
+lifeCycleVMKt = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-ktx", version.ref = "lifeCycleVMKt"}
+lifeCycleRuntimekt = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifeCycleRuntimekt"}
+lifeCycleLiveData = { group = "androidx.lifecycle", name = "lifecycle-livedata-ktx", version.ref = "lifeCycleLiveData"}
+squareRetrofit = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "squareRetrofit"}
+converterGson = { group = "com.squareup.retrofit2", name = "converter-gson", version.ref = "converterGson"}
+logging-interceptor = { module = "com.squareup.okhttp3:logging-interceptor", version.ref = "loggingInterceptor" }
+hiltAndroid = { module = "com.google.dagger:hilt-android", version.ref = "hiltAndroid" }
+hiltCompiler = { module = "com.google.dagger:hilt-compiler", version.ref = "hiltAndroid" }
+androidx-hilt-compiler = { module = "androidx.hilt:hilt-compiler", version.ref = "hiltCompiler" }
+mpandroidchart = { module = "com.github.PhilJay:MPAndroidChart", version.ref = "mpandroidchart" }
+androidx-core-splashscreen = { module = "androidx.core:core-splashscreen", version.ref = "coreSplashscreenVersion" }
+
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+kotlinParcelize = { id = "org.jetbrains.kotlin.plugin.parcelize", version.ref = "kotlinParcelize"}
+devtoolsKSP = { id = "com.google.devtools.ksp", version.ref = "devtoolKSP"}
+navSafeArgs = { id = "androidx.navigation.safeargs.kotlin", version.ref = "navSafeArgs"}
+kotlinKapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kotlinKapt" }
+dagger-hilt-android = { id = "dagger.hilt.android.plugin", version.ref = "dagger-hilt-android"}
+

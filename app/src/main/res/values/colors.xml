@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorBlack">#FF000000</color>
+    <color name="colorWhite">#FFFFFFFF</color>
+    <color name="colorNavbar">#0E6FFF</color>
+    <color name="colorBtmInActive">#999CA0</color>
+    <color name="light_grey">#CACACA</color>
+    <color name="colorRed">#DD2B26</color>
+    <color name="colorLBlue">#2b81ff</color>
+    <color name="trans">#00000000</color>
+</resources>

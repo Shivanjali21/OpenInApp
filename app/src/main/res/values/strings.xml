@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">OpenInApp</string>
+
+    <string name="dashboard_tag">Dashboard</string>
+
+    <string name="gm_tag">Good Morning</string>
+    <string name="username_tag">Ajay Manva</string>
+    <string name="overview_tag">Overview</string>
+    <string name="top_links_btn">Top Links</string>
+    <string name="recent_links_btn">Recent Links</string>
+    <string name="allLink_tag">View all Links</string>
+    <string name="analytics_tag">View Analytics</string>
+    <string name="talk_tag">Talk with us</string>
+    <string name="faq_tag">Frequently Asked Questions</string>
+    <string name="btm_link">Link</string>
+    <string name="btm_courses">Courses</string>
+    <string name="btm_campaigns">Campaigns</string>
+    <string name="btm_profile">Profile</string>
+    <string name="count_click_tag">Clicks</string>
+    <string name="no_internet">No Internet! Please check your\ninternet connection.</string>
+    <string name="no_data">No Data Available!</string>
+</resources>
